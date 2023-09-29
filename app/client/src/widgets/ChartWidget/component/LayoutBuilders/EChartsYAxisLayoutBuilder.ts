@@ -16,6 +16,8 @@ export class EChartsYAxisLayoutBuilder {
   labelsWidth: number;
   nameGap: number;
   leftOffset: number;
+  paddingFromAxis = 10;
+  commaPadding = 10;
 
   constructor(props: YAxisLayoutBuilderParams) {
     this.props = props;
@@ -61,6 +63,6 @@ export class EChartsYAxisLayoutBuilder {
       this.props.longestLabel[longestLabelKey],
       this.props.font,
     );
-    return labelWidthYAxis + 10;
+    return labelWidthYAxis + this.paddingFromAxis + this.commaPadding;
   };
 }
